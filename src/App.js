@@ -6,20 +6,35 @@ import cleanData from './utilities'
 import './App.css'
 
 const App = () => {
-  const [currentQuest, setCurrentQuest] = useState({})
-  const [completedQuests, setCompletedQuests] = useState([])
+  const [currentQuest, setCurrentQuest] = useState({});
+  const [completedQuests, setCompletedQuests] = useState([]);
+  const [error, setError] = useState('');
 
   const getData = async () => {
-    const response = await fetch('http://www.boredapi.com/api/activity/');
-    const data = await response.json();
-    const activity = cleanData(data)
-    
-    setCurrentQuest(activity)
-  }
+    try {    
+      const response = await fetch('http://www.boredapi.com/api/activity/')
+      const data = await response.json()
+      const activity = cleanData(data)
+
+      if (!response.ok) {
+        return
+      } 
+
+      setCurrentQuest(activity)
+
+    } catch (error) {
+         setError(error)
+      }
+  } 
 
   const markCompleted = (currentQuest) => {
-    setCompletedQuests([...completedQuests, currentQuest])
+    setCompletedQuests([...completedQuests, currentQuest]);
+    setCurrentQuest('')
   }
+
+  useEffect (() => {
+    setCurrentQuest('')
+  }, [])
 
   return (
     <main>
@@ -43,6 +58,7 @@ const App = () => {
           currentQuest={currentQuest} 
           markCompleted={markCompleted} 
           getData={getData}
+          error={error}
         />} 
       />
       <Route path='/quest-complete' render={() => 
