@@ -10,6 +10,10 @@ const App = () => {
   const [completedQuests, setCompletedQuests] = useState([]);
   const [error, setError] = useState('');
 
+  const errorMessage = error ? <p>The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! The powers of good will overcome. Please try again later.</p> : null
+  const welcomeMessage = !error ? <p>Welcome, Traveler! What would you like to do?</p> : errorMessage
+  const conditionalButton = !error ?   <Link to="/new-quest"><button>View your quest</button></Link> : null
+
   const getData = async () => {
     try {    
       const response = await fetch('http://www.boredapi.com/api/activity/')
@@ -29,11 +33,10 @@ const App = () => {
 
   const markCompleted = (currentQuest) => {
     setCompletedQuests([...completedQuests, currentQuest]);
-    setCurrentQuest('')
   }
 
   useEffect (() => {
-    setCurrentQuest('')
+    getData()
   }, [])
 
   return (
@@ -44,9 +47,8 @@ const App = () => {
         </header>
         <nav>
           <div>
-            <Link to="/new-quest">
-              <button>Start a New Quest</button>
-            </Link>
+            {welcomeMessage}
+            {conditionalButton}
             <Link to="/view-all-completed">
               <button>Show Completed Quests</button>
             </Link>

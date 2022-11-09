@@ -1,22 +1,21 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './QuestView.css'
 
 const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
-    const optionalLink = !completed && currentQuest.link ? <p>Not sure where to start? Check out <a href={`${currentQuest.link}`} target="_blank">this link</a></p> : null
+    const optionalLink = !completed && currentQuest.link && !error ? <p>Not sure where to start? Check out <a href={`${currentQuest.link}`} target="_blank">this link</a></p> : null
     const header = !completed ? <div><h2>{currentQuest.activity}</h2>{optionalLink}</div> : <h2>Well done, Traveler!</h2>
-    const dynamicButton = !completed ? 
+    const dynamicButton = !completed && !error ? 
         <Link to="quest-complete">
-            <button onClick={() => markCompleted(currentQuest)}>Mark as Complete</button>
+            <button onClick={() => {
+                markCompleted(currentQuest)
+                getData()}}>Mark as Complete</button>
         </Link> :
         <Link to="view-all-completed">
             <button>View Completed</button>
         </Link>
-    const errorMessage = error ? <h2>The dark lord is afoot, and there was an error! Please persist, and try again!</h2> : null
-
-    useEffect(() => {
-        getData()
-    }, [])
+    const errorMessage = error ? <p>Another quest cannot be granted at this time. Confound that dark lord!</p> : null
 
     return (
         <section>
@@ -34,3 +33,11 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
 }
 
 export default QuestView
+
+QuestView.propTypes = {
+    currentQuest: PropTypes.object,
+    markCompleted: PropTypes.func,
+    getData: PropTypes.func.isRequired,
+    completed: PropTypes.bool,
+    error: PropTypes.string
+}
