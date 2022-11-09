@@ -5,6 +5,7 @@ import Completed from './Components/Completed/Completed'
 import cleanData from './utilities'
 import './App.css'
 import wizard from './assets/wizard.png'
+import titleBanner from './assets/title-banner.png'
 
 const App = () => {
   const [currentQuest, setCurrentQuest] = useState({});
@@ -44,7 +45,7 @@ const App = () => {
     <main>
       <Route exact path="/">
         <header>
-          <h1 className='title'>SideQuest</h1>
+          <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
         </header>
         <nav>
           <div>
