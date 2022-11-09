@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './QuestView.css'
 
 const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
@@ -32,3 +33,11 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
 }
 
 export default QuestView
+
+QuestView.propTypes = {
+    currentQuest: PropTypes.object,
+    markCompleted: PropTypes.func,
+    getData: PropTypes.func,
+    completed: PropTypes.bool,
+    error: PropTypes.string
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types'
 import './Completed.css'
 
 const Completed = ({ completedQuests }) => {
@@ -23,3 +24,7 @@ const Completed = ({ completedQuests }) => {
 }
 
 export default Completed
+
+Completed.propTypes = {
+    completedQuests: PropTypes.array
+}
