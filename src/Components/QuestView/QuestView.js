@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './QuestView.css'
 
@@ -13,6 +13,10 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
             <button>View Completed</button>
         </Link>
     const errorMessage = error ? <h2>The dark lord is afoot, and there was an error! Please persist, and try again!</h2> : null
+
+    useEffect(() => {
+        getData()
+    }, [])
 
     return (
         <section>

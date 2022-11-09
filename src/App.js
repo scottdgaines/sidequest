@@ -45,7 +45,7 @@ const App = () => {
         <nav>
           <div>
             <Link to="/new-quest">
-              <button onClick={getData}>Start a New Quest</button>
+              <button>Start a New Quest</button>
             </Link>
             <Link to="/view-all-completed">
               <button>Show Completed Quests</button>
