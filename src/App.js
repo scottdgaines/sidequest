@@ -4,6 +4,7 @@ import QuestView from './Components/QuestView/QuestView'
 import Completed from './Components/Completed/Completed'
 import cleanData from './utilities'
 import './App.css'
+import wizard from './assets/wizard.png'
 
 const App = () => {
   const [currentQuest, setCurrentQuest] = useState({});
@@ -43,7 +44,7 @@ const App = () => {
     <main>
       <Route exact path="/">
         <header>
-          <h1>SideQuest</h1>
+          <h1 className='title'>SideQuest</h1>
         </header>
         <nav>
           <div>
@@ -54,6 +55,7 @@ const App = () => {
             </Link>
           </div>
         </nav>
+        <img src={wizard} alt="a friendly wizard" className="wizard" />
       </Route>
       <Route path="/new-quest" render={() => 
         <QuestView 
