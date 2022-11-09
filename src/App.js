@@ -4,14 +4,16 @@ import QuestView from './Components/QuestView/QuestView'
 import Completed from './Components/Completed/Completed'
 import cleanData from './utilities'
 import './App.css'
+import wizard from './assets/wizard.png'
+import titleBanner from './assets/title-banner.png'
 
 const App = () => {
   const [currentQuest, setCurrentQuest] = useState({});
   const [completedQuests, setCompletedQuests] = useState([]);
   const [error, setError] = useState('');
 
-  const errorMessage = error ? <p>The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! The powers of good will overcome. Please try again later.</p> : null
-  const welcomeMessage = !error ? <p>Welcome, Traveler! What would you like to do?</p> : errorMessage
+  const errorMessage = error ? <p className="welcome-message">The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! The powers of good will overcome. Please try again later.</p> : null
+  const welcomeMessage = !error ? <p className="welcome-message">Welcome, Traveler! <br />What would you like to do?</p> : errorMessage
   const conditionalButton = !error ?   <Link to="/new-quest"><button>View your quest</button></Link> : null
 
   const getData = async () => {
@@ -43,7 +45,7 @@ const App = () => {
     <main>
       <Route exact path="/">
         <header>
-          <h1>SideQuest</h1>
+          <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
         </header>
         <nav>
           <div>
@@ -54,6 +56,7 @@ const App = () => {
             </Link>
           </div>
         </nav>
+        <img src={wizard} alt="a friendly wizard" className="wizard" />
       </Route>
       <Route path="/new-quest" render={() => 
         <QuestView 
