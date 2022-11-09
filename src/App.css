@@ -1,5 +1,6 @@
 button {
   background-color: lightgrey;
+  cursor: pointer;
   font-family: 'VT323', monospace;
   font-size: 25px;
   margin: 0px 5px;

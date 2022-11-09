@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types'
 import './Completed.css'
+import backArrow from '../../assets/back-arrow.png'
 
 const Completed = ({ completedQuests }) => {
     const completedQuest = completedQuests.map(quest => {
@@ -17,7 +18,7 @@ const Completed = ({ completedQuests }) => {
             <div>
                 <h3>Your completed Quests</h3>
                 {completedQuest}
-                <NavLink to="/">Return to Main</NavLink>
+                <NavLink to="/"><img src={backArrow} alt="Return to Main" className="back-arrow" /></NavLink>
             </div>
         </section>
     )

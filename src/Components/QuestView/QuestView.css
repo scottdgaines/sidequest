@@ -1,0 +1,38 @@
+.back-arrow {
+    width: 50px;
+}
+
+.link {
+    font-family: 'Cardo', serif;
+}
+
+.quest-button {
+    margin-top: 2px;
+}
+
+.quest-text {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.quest-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quest-scroll {
+    align-items: center;
+    background-image: url('../../assets/quest-banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    height: 85vh;
+    width: 85vw;
+}
