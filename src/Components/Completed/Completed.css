@@ -1,0 +1,13 @@
+.completed-quests {
+    background-image: url('../../assets/completed-banner.png');
+    height: 100vh;
+    text-align: center;
+}
+
+.completed-quests-container {
+    height: 60vh;
+    width: 30vw;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+}
