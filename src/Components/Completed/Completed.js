@@ -1,9 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import './Completed.css'
 
 const Completed = ({ completedQuests }) => {
-    console.log('completed', completedQuests)
-
     const completedQuest = completedQuests.map(quest => {
         return (
             <ul key={quest.key}>
@@ -11,12 +10,13 @@ const Completed = ({ completedQuests }) => {
             </ul>
         )
     })
+    
     return (
         <section>
             <div>
                 <h3>Your completed Quests</h3>
                 {completedQuest}
-                <NavLink to='/'>Return to Main</NavLink>
+                <NavLink to="/">Return to Main</NavLink>
             </div>
         </section>
     )
