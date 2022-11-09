@@ -67,7 +67,11 @@ const App = () => {
           getData={getData}
         />} 
       />
-      <Route path='/view-all-completed' render={() => <Completed />} />
+      <Route path='/view-all-completed' render={() => 
+        <Completed 
+          completedQuests={completedQuests} 
+        />} 
+      />
     </main>
   )
 }

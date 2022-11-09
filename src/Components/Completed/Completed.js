@@ -1,19 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Completed = () => {
-    //get all completed quests as props
-    //map over those to create a listing
-    //return "you [activity] on [date]"
-  return (
-    <section>
-        <div>
-            <h3>Your completed Quests</h3>
-            {/* {quest} */}
-            <NavLink to='/'>Return to Home</NavLink>
-        </div>
-    </section>
-  )
+const Completed = ({ completedQuests }) => {
+    console.log('completed', completedQuests)
+
+    const completedQuest = completedQuests.map(quest => {
+        return (
+            <ul key={quest.key}>
+                On {quest.date}, you completed the quest to "{quest.activity}"
+            </ul>
+        )
+    })
+    return (
+        <section>
+            <div>
+                <h3>Your completed Quests</h3>
+                {completedQuest}
+                <NavLink to='/'>Return to Main</NavLink>
+            </div>
+        </section>
+    )
 }
 
 export default Completed
