@@ -26,5 +26,5 @@ const Completed = ({ completedQuests }) => {
 export default Completed
 
 Completed.propTypes = {
-    completedQuests: PropTypes.array
+    completedQuests: PropTypes.array.isRequired
 }

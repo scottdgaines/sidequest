@@ -37,7 +37,7 @@ export default QuestView
 QuestView.propTypes = {
     currentQuest: PropTypes.object,
     markCompleted: PropTypes.func,
-    getData: PropTypes.func,
+    getData: PropTypes.func.isRequired,
     completed: PropTypes.bool,
     error: PropTypes.string
 }
