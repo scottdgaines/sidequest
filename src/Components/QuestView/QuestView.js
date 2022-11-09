@@ -7,7 +7,9 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
     const header = !completed ? <div><h2>{currentQuest.activity}</h2>{optionalLink}</div> : <h2>Well done, Traveler!</h2>
     const dynamicButton = !completed && !error ? 
         <Link to="quest-complete">
-            <button onClick={() => markCompleted(currentQuest)}>Mark as Complete</button>
+            <button onClick={() => {
+                markCompleted(currentQuest)
+                getData()}}>Mark as Complete</button>
         </Link> :
         <Link to="view-all-completed">
             <button>View Completed</button>
