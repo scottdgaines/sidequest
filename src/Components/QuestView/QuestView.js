@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './QuestView.css'
-import backArrow from '../../assets/back-arrow.png'
 
 const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
     const optionalLink = !completed && currentQuest.link && !error ? 
@@ -36,9 +35,9 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
                 <Link to="/new-quest">
                     <button onClick={getData} className="quest-button">Get Another Quest</button>
                 </Link>
-                <NavLink to="/">
-                    <img src={backArrow} alt="Return to Main" className="back-arrow" />
-                </NavLink>
+                <Link to="/">
+                    <button className="quest-button">Return to Main</button>
+                </Link>
         </section>
     )
 }

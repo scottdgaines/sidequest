@@ -3,7 +3,7 @@ button {
   cursor: pointer;
   font-family: 'VT323', monospace;
   font-size: 25px;
-  margin: 0px 5px;
+  margin: 0px 3px;
 }
 
 main {
@@ -32,8 +32,8 @@ nav {
 }
 
 .welcome-message {
-  font-size: 35px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 5px;
   margin-top: 20px;
 }
 
