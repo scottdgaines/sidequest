@@ -1,8 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types'
 import './Completed.css'
-import backArrow from '../../assets/back-arrow.png'
 
 const Completed = ({ completedQuests }) => {
     const completedQuest = completedQuests.map(quest => {
@@ -17,13 +16,13 @@ const Completed = ({ completedQuests }) => {
     
     return (
         <section className="scroll completed-quests">
-                <h3 className="quest-header">Your completed Quests</h3>
+                <h3 className="quest-header">Your Completed Quests</h3>
                 <div className="completed-quests-container">
                     {completedQuest}
                 </div>
-                <NavLink to="/">
-                    <img src={backArrow} alt="Return to Main" className="back-arrow" />
-                </NavLink>
+                <Link to="/">
+                    <button className="quest-button">Return to Main</button>
+                </Link>
         </section>
     )
 }
