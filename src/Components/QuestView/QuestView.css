@@ -4,7 +4,9 @@
 }
 
 .quest-text {
-    font-family: 'Cardo', serif;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 20px;;
 }
 
 .quest-button {

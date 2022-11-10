@@ -12,7 +12,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
             <h2 className="quest-header">{currentQuest.activity}</h2>
             {optionalLink}
         </div> : 
-        <h2 className="quest-header">Well done, Traveler!</h2>
+        <div><h2 className="quest-header">Well done, Traveler!</h2><p className="quest-text">Your quest is complete. <br /> What would you like to do now?</p></div>
     const dynamicButton = !completed && !error ? 
         <Link to="quest-complete">
             <button 
