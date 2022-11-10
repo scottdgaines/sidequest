@@ -1,3 +1,8 @@
+.completed {
+    margin-top: 15px;
+    width: 20vw;
+}
+
 .completed-quests {
     background-image: url('../../assets/completed-banner.png');
     height: 100vh;

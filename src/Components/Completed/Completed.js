@@ -16,7 +16,7 @@ const Completed = ({ completedQuests }) => {
     
     return (
         <section className="scroll completed-quests">
-                <h3 className="quest-header">Your Completed Quests</h3>
+                <h3 className="quest-header completed">Your Completed Quests</h3>
                 <div className="completed-quests-container">
                     {completedQuest}
                 </div>
