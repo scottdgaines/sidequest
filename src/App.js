@@ -12,9 +12,9 @@ const App = () => {
   const [completedQuests, setCompletedQuests] = useState([]);
   const [error, setError] = useState('');
 
-  const errorMessage = error ? <p className="welcome-message">The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! The powers of good will overcome. Please try again later.</p> : null
+  const errorMessage = error ? <p className="welcome-message">The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! You can try again later.</p> : null
   const welcomeMessage = !error ? <p className="welcome-message">Welcome, Traveler! <br />I have a quest for you! <br />What would you like to do?</p> : errorMessage
-  const conditionalButton = !error ?   <Link to="/new-quest"><button>View your quest</button></Link> : null
+  const conditionalButton = !error ?   <Link to="/new-quest"><button>View Your Quest</button></Link> : null
 
   const getData = async () => {
     try {    
