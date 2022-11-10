@@ -1,4 +1,4 @@
-describe('Homepage display', () => {
+describe('Homepage', () => {
   beforeEach(() => {
     cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub.json'});
     cy.visit('http://localhost:3000/')
@@ -19,6 +19,13 @@ describe('Homepage display', () => {
     cy.get('.quest-header').should('be.visible')
     cy.get('.title').should('not.exist')
   })
+
+  it('Should be able to view all completed quests from the main page', () => {
+    cy.get('[href="/view-all-completed"] > button').click()
+    cy.location('href').should('eq', 'http://localhost:3000/view-all-completed')
+    cy.get('.quest-header').should('be.visible')
+  })
+
 })
 
 describe('Homepage network error user flow', () => {

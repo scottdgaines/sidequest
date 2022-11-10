@@ -27,14 +27,6 @@ describe('New quest', () => {
       cy.get('[href="/view-all-completed"] > .quest-button').should('contain', 'View Completed')
     })
 
-    it('Should be able to view Completed Quests', () => {
-      cy.get('[href="/view-all-completed"] > .quest-button').should('contain', 'View Completed').click()
-      cy.location('href').should('eq', 'http://localhost:3000/view-all-completed')
-      cy.get('.quest-header').should('be.visible').should('contain', 'Your Completed Quests')
-      cy.get('.text').should('be.visible').should('contain', 'On Thursday, November 10, 2022, you completed the quest to "Do a jigsaw puzzle"')
-      cy.get('.quest-button').should('be.visible')
-    })
-
     it('Should be able to return to the main page from Completed Quest', () => {
       cy.get('[href="/view-all-completed"] > .quest-button').should('contain', 'View Completed').click()
       cy.get('.quest-button').click()
