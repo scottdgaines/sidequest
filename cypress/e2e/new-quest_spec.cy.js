@@ -16,18 +16,18 @@ describe('New quest', () => {
     cy.get('[href="/"] > .quest-button').should('be.visible').should('contain', 'Return to Main')
   })
 
-  context.skip('New quest user flows: mark quest as Complete', () => {
+  context('New quest user flows: mark quest as Complete', () => {
     beforeEach(() => {
       cy.get('[href="/quest-complete"] > .quest-button').click()
-      cy.location('href').should('eq', 'http://localhost:3000/quest-complete')
     })
 
     it('Should be able to mark a quest as Complete', () => {
+      cy.location('href').should('eq', 'http://localhost:3000/quest-complete')
       cy.get('.quest-header').should('be.visible').should('contain', 'Well done, Traveler!')
       cy.get('[href="/view-all-completed"] > .quest-button').should('contain', 'View Completed')
     })
 
-    it('Should be able to view Completed Quest', () => {
+    it('Should be able to view Completed Quests', () => {
       cy.get('[href="/view-all-completed"] > .quest-button').should('contain', 'View Completed').click()
       cy.location('href').should('eq', 'http://localhost:3000/view-all-completed')
       cy.get('.quest-header').should('be.visible').should('contain', 'Your Completed Quests')
@@ -57,5 +57,25 @@ describe('New quest', () => {
       cy.get('.quest-text').should('not.exist')
     })
 
+    it('Should be able to return to the main page after getting a new quest', () => {
+      cy.get('[href="/"] > .quest-button').click()
+      cy.location('href').should('eq', 'http://localhost:3000/')
+    })
+  })
+})
+
+describe('New Quest: network error user flow', () => {
+  beforeEach(() => {
+    cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub.json'});
+    cy.visit('http://localhost:3000/')
+    cy.get('[href="/new-quest"] > button').click()
+  })
+
+  it('Should display an error message, if fetch failed after intial quest display', () => {
+    cy.intercept('http://www.boredapi.com/api/activity/', {forceNetworkError: true});
+    cy.get('[href="/new-quest"] > .quest-button').click()
+    cy.get('.quest-text').should('be.visible').should('contain', 'Another quest cannot be granted at this time. Confound that Dark Lord!')
+    cy.get('[href="/"] > .quest-button').click()
+    cy.get('.welcome-message').should('be.visible').should('contain', 'The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! You can try again later.')
   })
 })

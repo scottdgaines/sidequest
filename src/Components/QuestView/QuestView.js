@@ -24,7 +24,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
         <Link to="view-all-completed">
             <button className="quest-button">View Completed</button>
         </Link>
-    const errorMessage = error ? <p>Another quest cannot be granted at this time. Confound that dark lord!</p> : null
+    const errorMessage = error ? <p className="quest-text">Another quest cannot be granted at this time. Confound that Dark Lord!</p> : null
 
     return (
         <section className="scroll new-quest">
