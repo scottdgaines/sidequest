@@ -1,8 +1,10 @@
 describe('Homepage display', () => {
-
-  it('Should display the home screen', () => {
+  beforeEach(() => {
     cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub.json'});
     cy.visit('http://localhost:3000/')
+  });
+  
+  it('Should display the home ', () => {
     cy.get('.title').should('be.visible')
     cy.get('nav').should('be.visible')
       .should('contain', 'Welcome, Traveler! I have a quest for you! What would you like to do?')
@@ -10,13 +12,6 @@ describe('Homepage display', () => {
     cy.get('[href="/view-all-completed"] > button').should('be.visible').should('contain', 'Show Completed Quests')
     cy.get('.wizard').should('be.visible')
   })
-})
-
-describe('Homepage user flows', () => {
-  beforeEach(() => {
-    cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub.json'});
-    cy.visit('http://localhost:3000/')
-  });
 
   it('Should be able to navigate to the new quest page', () => {
     cy.get('[href="/new-quest"] > button').click()

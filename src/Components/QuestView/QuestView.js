@@ -5,8 +5,7 @@ import './QuestView.css'
 
 const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
     const optionalLink = !completed && currentQuest.link && !error ? 
-        <p className="quest-text">Not sure where to start? Check out 
-            <a href={`${currentQuest.link}`} target="_blank">this link</a>
+        <p className="quest-text">Not sure where to start? Check out <a href={`${currentQuest.link}`} target="_blank">this link</a>
         </p> : null
     const header = !completed ? 
         <div className="quest-name-container">
