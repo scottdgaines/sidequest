@@ -82,6 +82,7 @@ const App = () => {
           <QuestView 
             completed={true}
             getData={getData}
+            greeting={theme.greeting}
           />} 
         />
         <Route path="/view-all-completed" render={() => 
