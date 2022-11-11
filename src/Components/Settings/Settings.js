@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { forest, castle, meadow } from '../../themes.js';
@@ -23,3 +24,8 @@ const Settings = ({ theme, setTheme }) => {
 }
 
 export default Settings
+
+Settings.propTypes = {
+  theme: PropTypes.object.isRequired,
+  setTheme: PropTypes.func.isRequired
+};

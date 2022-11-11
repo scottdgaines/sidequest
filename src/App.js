@@ -74,6 +74,7 @@ const App = () => {
             currentQuest={currentQuest} 
             markCompleted={markCompleted} 
             getData={getData}
+            greeting={theme.greeting}
             error={error}
           />} 
         />
