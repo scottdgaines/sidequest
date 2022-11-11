@@ -31,6 +31,17 @@ nav {
 
 }
 
+.theme-button {
+  font-size: 20px;
+}
+
+.theme-setting-container {
+  background-color: rgb(182, 180, 180);
+  border: 2px solid black;
+  padding: 5px;
+  padding-top: 0px;
+}
+
 .welcome-message {
   font-size: 30px;
   margin-bottom: 5px;
