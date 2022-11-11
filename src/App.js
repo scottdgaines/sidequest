@@ -5,7 +5,6 @@ import Completed from './Components/Completed/Completed';
 import NotFound from'./Components/NotFound/NotFound';
 import cleanData from './utilities';
 import './App.css';
-import wizard from './assets/wizard.png';
 import titleBanner from './assets/title-banner.png';
 import { forest, castle, meadow } from './themes.js';
 
@@ -40,13 +39,13 @@ const App = () => {
     setCompletedQuests([...completedQuests, currentQuest]);
   };
 
-  // if (theme === 'forest') {
+  if (theme === 'forest') {
     
-  // } else if (theme === 'castle') {
-  //   console.log(theme)
-  // } else {
-  //   console.log(theme)
-  // }
+  } else if (theme === 'castle') {
+    console.log(theme)
+  } else {
+    console.log(theme.character)
+  }
 
   useEffect (() => {
     getData();
@@ -68,7 +67,7 @@ const App = () => {
               </Link>
             </div>
           </nav>
-          <img src={wizard} alt="a friendly wizard" className="wizard" />
+          <img src={theme.character} alt="a friendly wizard" className="wizard" />
           <form className="theme-setting-container">
             <p className="quest-text">choose your theme</p>
             <input type="radio" name="theme" value="meadow" checked={theme === meadow} onChange={() => setTheme(meadow)} />
