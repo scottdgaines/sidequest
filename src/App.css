@@ -6,6 +6,12 @@ button {
   margin: 0px 3px;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -24,7 +30,9 @@ nav {
 }
 
 .setting-icon {
-  width: 25px;
+  width: 30px;
+  margin-right: 20px;
+  margin-top: 15px;
 }
 
 .title {
@@ -44,7 +52,7 @@ nav {
   margin-top: 20px;
 }
 
-.wizard {
+.character {
   width: 25em;
 }
 

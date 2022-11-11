@@ -41,14 +41,6 @@ const App = () => {
     setCompletedQuests([...completedQuests, currentQuest]);
   };
 
-  // if (theme === 'forest') {
-    
-  // } else if (theme === 'castle') {
-  //   console.log(theme)
-  // } else {
-  //   console.log(theme.character)
-  // }
-
   useEffect (() => {
     getData();
   }, []);
@@ -59,10 +51,10 @@ const App = () => {
         <Route exact path="/">
           <header>
             <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
+            <Link to='/settings'>
+              <img src={settingsIcon} alt="Settings" className="setting-icon"/>
+            </Link>
           </header>
-          <Link to='/settings'>
-            <img src={settingsIcon} alt="Settings" className="setting-icon"/>
-          </Link>
           <nav>
             <div>
               {welcomeMessage}
@@ -72,7 +64,7 @@ const App = () => {
               </Link>
             </div>
           </nav>
-          <img src={theme.character} alt="a friendly wizard" className="wizard" />
+          <img src={theme.character} alt="a friendly wizard" className="character" />
         </Route>
         <Route path="/settings" render={() => 
           <Settings theme={theme} setTheme={setTheme} />}
