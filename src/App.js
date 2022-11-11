@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import QuestView from './Components/QuestView/QuestView';
 import Completed from './Components/Completed/Completed';
+import Settings from './Components/Settings/Settings';
 import NotFound from'./Components/NotFound/NotFound';
 import cleanData from './utilities';
 import './App.css';
 import titleBanner from './assets/title-banner.png';
-import { forest, castle, meadow } from './themes.js';
+import settingsIcon from './assets/settings-icon.png';
+import { meadow } from './themes.js';
 
 const App = () => {
   const [currentQuest, setCurrentQuest] = useState({});
@@ -58,6 +60,9 @@ const App = () => {
           <header>
             <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
           </header>
+          <Link to='/settings'>
+            <img src={settingsIcon} alt="Settings" className="setting-icon"/>
+          </Link>
           <nav>
             <div>
               {welcomeMessage}
@@ -68,16 +73,10 @@ const App = () => {
             </div>
           </nav>
           <img src={theme.character} alt="a friendly wizard" className="wizard" />
-          <form className="theme-setting-container">
-            <p className="quest-text">choose your theme</p>
-            <input type="radio" name="theme" value="meadow" checked={theme === meadow} onChange={() => setTheme(meadow)} />
-            <label for="meadow" className="quest-text theme-button">Meadow</label>
-            <input type="radio" name="theme" value="forest" checked={theme === forest} onChange={() => setTheme(forest)} />
-            <label for="haunted-forest" className="quest-text theme-button">Haunted forest</label>
-            <input type="radio" name="theme" value="castle" checked={theme === castle} onChange={() => setTheme(castle)} />
-            <label for="castle" className="quest-text theme-button">Castle</label>
-          </form>
         </Route>
+        <Route path="/settings" render={() => 
+          <Settings theme={theme} setTheme={setTheme} />}
+        />
         <Route path="/new-quest" render={() => 
           <QuestView 
             currentQuest={currentQuest} 

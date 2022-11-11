@@ -23,6 +23,10 @@ nav {
   width: 16em; 
 }
 
+.setting-icon {
+  width: 25px;
+}
+
 .title {
   align-self: flex-start;
   width: 25em;
@@ -32,13 +36,6 @@ nav {
 
 .theme-button {
   font-size: 20px;
-}
-
-.theme-setting-container {
-  background-color: rgb(182, 180, 180);
-  border: 2px solid black;
-  padding: 5px;
-  padding-top: 0px;
 }
 
 .welcome-message {
