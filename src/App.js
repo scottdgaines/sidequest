@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import QuestView from './Components/QuestView/QuestView';
 import Completed from './Components/Completed/Completed';
+import NotFound from'./Components/NotFound/NotFound';
 import cleanData from './utilities';
 import './App.css';
 import wizard from './assets/wizard.png';
@@ -43,38 +44,41 @@ const App = () => {
 
   return (
     <main>
-      <Route exact path="/">
-        <header>
-          <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
-        </header>
-        <nav>
-          <div>
-            {welcomeMessage}
-            {conditionalButton}
-            <Link to="/view-all-completed">
-              <button>Show Completed Quests</button>
-            </Link>
-          </div>
-        </nav>
-        <img src={wizard} alt="a friendly wizard" className="wizard" />
-      </Route>
-      <Route path="/new-quest" render={() => 
-        <QuestView 
-          currentQuest={currentQuest} 
-          markCompleted={markCompleted} 
-          getData={getData}
-          error={error}
-        />} 
-      />
-      <Route path="/quest-complete" render={() => 
-        <QuestView 
-          completed={true}
-          getData={getData}
-        />} 
-      />
-      <Route path="/view-all-completed" render={() => 
-        <Completed completedQuests={completedQuests} />} 
-      />
+      <Switch>
+        <Route exact path="/">
+          <header>
+            <img src={titleBanner} alt="an unfurling banner reads 'Sidequest'" className='title' />
+          </header>
+          <nav>
+            <div>
+              {welcomeMessage}
+              {conditionalButton}
+              <Link to="/view-all-completed">
+                <button>Show Completed Quests</button>
+              </Link>
+            </div>
+          </nav>
+          <img src={wizard} alt="a friendly wizard" className="wizard" />
+        </Route>
+        <Route path="/new-quest" render={() => 
+          <QuestView 
+            currentQuest={currentQuest} 
+            markCompleted={markCompleted} 
+            getData={getData}
+            error={error}
+          />} 
+        />
+        <Route path="/quest-complete" render={() => 
+          <QuestView 
+            completed={true}
+            getData={getData}
+          />} 
+        />
+        <Route path="/view-all-completed" render={() => 
+          <Completed completedQuests={completedQuests} />} 
+        />
+        <Route component={NotFound} />
+      </Switch>
     </main>
   );
 };
