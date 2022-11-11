@@ -43,3 +43,11 @@
 .new-quest {
     background-image: url('../../assets/quest-banner.png');
 }
+
+@media screen and (max-width: 414px) {
+    .scroll{
+        margin-top: 0px;
+        width: 100px;
+        height: 60vh;
+    }
+}

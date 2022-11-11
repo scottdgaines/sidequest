@@ -19,3 +19,15 @@
     min-width: 300px;
     width: 30vw;
 }
+
+@media screen and (max-width: 414px) {
+    .completed-quests-display {
+        height: 25vh;
+        margin-top: 50px;
+        width: 20vw;
+        overflow-y: hidden;
+    }
+    .completed-quests-container {
+        height: 25vh;
+    }
+}

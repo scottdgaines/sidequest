@@ -28,7 +28,6 @@ nav {
   width: 25em;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 .welcome-message {
@@ -41,3 +40,30 @@ nav {
   width: 25em;
 }
 
+@media screen and (max-width: 480px) {
+  .wizard {
+    width: 15em;
+  }
+
+  button {
+    font-size: 20px;
+    margin: 6px 3px;
+  }
+
+  nav {
+    height: 80px;
+    overflow-x: scroll;
+    width: 8em;
+  }
+
+  .title {
+    width: 15em;
+    margin-top: 30px;
+    margin-bottom: 50px
+  }
+
+  .welcome-message {
+    margin-top: 10px;
+  }
+
+}
