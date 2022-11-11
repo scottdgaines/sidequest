@@ -8,15 +8,15 @@ const Completed = ({ completedQuests }) => {
         return (
             <ul 
                 key={quest.key}
-                className="text">
+                className="completed-quest">
                     On {quest.date}, you completed the quest to "{quest.activity}"
             </ul>
         )
     })
     
     return (
-        <section className="scroll completed-quests">
-                <h3 className="quest-header completed">Your Completed Quests</h3>
+        <section className="scroll completed-quests-display">
+                <h3 className="quest-header completed-header">Your Completed Quests</h3>
                 <div className="completed-quests-container">
                     {completedQuest}
                 </div>

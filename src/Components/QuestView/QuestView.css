@@ -6,7 +6,6 @@
 .quest-text {
     font-family: 'VT323', monospace;
     text-align: center;
-    font-size: 20px;;
 }
 
 .quest-button {
@@ -15,16 +14,16 @@
 
 .quest-header {
     font-family: 'MedievalSharp', cursive;
-    font-size: 30px;
     text-align: center;
 }
 
 .quest-name-container {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 50%;
+    width: 45%;
 }
 
 .scroll {
@@ -37,6 +36,8 @@
     justify-content: center;
     margin-top: 40px;
     height: 85vh;
+    min-height: 450px;
+    min-width: 500px;
     width: 85vw;
 }
 

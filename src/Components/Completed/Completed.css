@@ -1,18 +1,22 @@
-.completed {
-    margin-top: 15px;
-    width: 20vw;
+.completed-header {
+    min-width: 100px;
+    width: 100%
 }
 
-.completed-quests {
+.completed-quest {
+    font-family: 'Cardo', serif;
+}
+
+.completed-quests-display {
     background-image: url('../../assets/completed-banner.png');
-    height: 100vh;
-    text-align: center;
+    height: 700px;
 }
 
 .completed-quests-container {
+    border: 2px solid red;
     height: 60vh;
-    width: 30vw;
+    margin-top: 0px;
     overflow-x: scroll;
-    display: flex;
-    flex-wrap: wrap;
+    min-width: 300px;
+    width: 30vw;
 }
