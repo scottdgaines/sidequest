@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import './QuestView.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import './QuestView.css';
 
 const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
     let optionalLink;
     let header;
     let dynamicButton;
-    const errorMessage = error ? <p className="quest-text">Another quest cannot be granted at this time. Confound that Dark Lord!</p> : null
+    const errorMessage = error ? <p className="quest-text">Another quest cannot be granted at this time. Confound that Dark Lord!</p> : null;
 
     //Defining optionalLink
     if (!completed && currentQuest.link) {
         optionalLink = <p className="quest-text">Not sure where to start? Check out <a href={`${currentQuest.link}`} target="_blank">this link</a></p>
-    } 
+    };
 
     //Defining header
     if (!completed) {
@@ -28,7 +28,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
                 <p className="quest-text">Your quest is complete. 
                 <br /> What would you like to do now?</p>
             </div>
-    }
+    };
     
     //Defining dynamicButton
     if (!completed && !error) {
@@ -47,7 +47,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
             <Link to="view-all-completed">
                 <button className="quest-button">View Completed</button>
             </Link>
-    }
+    };
 
     return (
         <section className="scroll new-quest">
@@ -61,10 +61,10 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
                     <button className="quest-button">Return to Main</button>
                 </Link>
         </section>
-    )
-}
+    );
+};
 
-export default QuestView
+export default QuestView;
 
 QuestView.propTypes = {
     currentQuest: PropTypes.object,
@@ -72,4 +72,4 @@ QuestView.propTypes = {
     getData: PropTypes.func.isRequired,
     completed: PropTypes.bool,
     error: PropTypes.string
-}
+};
