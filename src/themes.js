@@ -1,20 +1,20 @@
-const themes = {
-   forrest: {
-        background: 'forrest-background',
+
+   const forest = {
+        background: 'forest-background',
         character: './assets/witch.png',
         greeting: 'Wandering One'
 
-    },
-  castle: {
+    }
+  const castle = {
         background: 'castle-background',
         character: './assets/king.png',
         greeting: 'Noble One'
-    },
-   meadow: {
+    }
+   const meadow = {
         background: 'meadow-background',
         character: './assets/wizard.png',
         greeting: 'Traveler'
     }
-}
 
-export default themes
+
+export { forest, castle, meadow }
