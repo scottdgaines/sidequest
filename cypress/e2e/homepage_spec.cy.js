@@ -5,12 +5,14 @@ describe('Homepage', () => {
   });
   
   it('Should display the home ', () => {
+    cy.get('.meadow-background').should('be.visible')
     cy.get('.title').should('be.visible')
+    cy.get('header > a').should('be.visible')
     cy.get('nav').should('be.visible')
       .should('contain', 'Welcome, Traveler! I have a quest for you! What would you like to do?')
     cy.get('[href="/new-quest"] > button').should('be.visible').should('contain', 'View Your Quest')
     cy.get('[href="/view-all-completed"] > button').should('be.visible').should('contain', 'Show Completed Quests')
-    cy.get('.wizard').should('be.visible')
+    cy.get('.character').should('be.visible')
   })
 
   it('Should be able to navigate to the new quest page', () => {

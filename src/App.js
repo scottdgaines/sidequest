@@ -64,7 +64,7 @@ const App = () => {
               </Link>
             </div>
           </nav>
-          <img src={theme.character} alt="a friendly wizard" className="character" />
+          <img src={theme.character} alt="a friendly fantasy character" className="character" />
         </Route>
         <Route path="/settings" render={() => 
           <Settings theme={theme} setTheme={setTheme} />}
