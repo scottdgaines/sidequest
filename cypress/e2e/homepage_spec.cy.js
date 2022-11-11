@@ -1,34 +1,34 @@
-describe('Homepage', () => {
+describe('Home page', () => {
   beforeEach(() => {
     cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub.json'});
     cy.visit('http://localhost:3000/')
   });
   
-  it('Should display the home ', () => {
+  it('Should display the Home page ', () => {
     cy.get('.title').should('be.visible')
+    cy.get('header > a').should('be.visible')
     cy.get('nav').should('be.visible')
-      .should('contain', 'Welcome, Traveler! I have a quest for you! What would you like to do?')
+      .should('contain', 'I have a quest for you! What would you like to do?')
     cy.get('[href="/new-quest"] > button').should('be.visible').should('contain', 'View Your Quest')
     cy.get('[href="/view-all-completed"] > button').should('be.visible').should('contain', 'Show Completed Quests')
-    cy.get('.wizard').should('be.visible')
+    cy.get('.character').should('be.visible')
   })
 
-  it('Should be able to navigate to the new quest page', () => {
+  it('Should be able to navigate to the New Quest page', () => {
     cy.get('[href="/new-quest"] > button').click()
     cy.location('href').should('eq', 'http://localhost:3000/new-quest');
     cy.get('.quest-header').should('be.visible')
     cy.get('.title').should('not.exist')
   })
 
-  it('Should be able to view all completed quests from the main page', () => {
+  it('Should be able to View All Completed Quests from the Main page', () => {
     cy.get('[href="/view-all-completed"] > button').click()
     cy.location('href').should('eq', 'http://localhost:3000/view-all-completed')
     cy.get('.quest-header').should('be.visible')
   })
-
 })
 
-describe('Homepage network error user flow', () => {
+describe('Home page network error user flow', () => {
   beforeEach(() => {
     cy.intercept('http://www.boredapi.com/api/activity/', {forceNetworkError: true});
     cy.visit('http://localhost:3000/')
@@ -43,6 +43,5 @@ describe('Homepage network error user flow', () => {
     cy.get('[href="/view-all-completed"] > button').click()
     cy.location('href').should('eq', 'http://localhost:3000/view-all-completed');
     cy.get('.quest-header').should('be.visible').should('contain', 'Your Completed Quests')
-
   })
 })

@@ -1,0 +1,15 @@
+.theme-setting-container {
+    background-color: rgb(182, 180, 180);
+    border: 2px solid black;
+    height: 100px;
+    padding: 5px;
+    padding-top: 0px;
+  }
+
+.settings-view {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}

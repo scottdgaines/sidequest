@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './QuestView.css';
 
-const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) => {
+const QuestView = ({ currentQuest,  markCompleted, getData, greeting, completed, error }) => {
     let optionalLink;
     let header;
     let dynamicButton;
@@ -18,14 +18,14 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
     if (!completed) {
         header = 
             <div className="quest-name-container">
-                <p className="quest-text">Your quest, Traveler, is to:</p>
+                <p className="quest-text">Your quest, {`${greeting}`}, is to:</p>
                 <h2 className="quest-header">{currentQuest.activity}</h2>
                 {optionalLink}
             </div>
     } else {
         header = 
             <div>
-                <h2 className="quest-header">Well done, Traveler!</h2>
+                <h2 className="quest-header">Well done, {`${greeting}`}!</h2>
                 <p className="quest-text">Your quest is complete. 
                 <br /> What would you like to do now?</p>
             </div>
@@ -71,6 +71,7 @@ QuestView.propTypes = {
     currentQuest: PropTypes.object,
     markCompleted: PropTypes.func,
     getData: PropTypes.func.isRequired,
+    greeting: PropTypes.string.isRequired,
     completed: PropTypes.bool,
     error: PropTypes.string
 };

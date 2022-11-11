@@ -3,6 +3,10 @@
     width: 50px;
 }
 
+.new-quest {
+    background-image: url('../../assets/quest-banner.png');
+}
+
 .quest-text {
     font-family: 'VT323', monospace;
     text-align: center;
@@ -18,9 +22,9 @@
 }
 
 .quest-name-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
     width: 45%;
 }
@@ -33,13 +37,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 40px;
-    height: 85vh;
+    height: 100vh;
     min-height: 450px;
     min-width: 500px;
     width: 85vw;
 }
 
-.new-quest {
-    background-image: url('../../assets/quest-banner.png');
+@media screen and (max-width: 414px) and (max-height) {
+    .scroll{
+        height: 60vh;
+        margin-top: 0px;
+        width: 100px;
+    }
 }

@@ -46,7 +46,8 @@ describe('New quest', () => {
       cy.intercept('http://www.boredapi.com/api/*', {fixture: 'stub-2.json'});
       cy.location('href').should('eq', 'http://localhost:3000/new-quest')
       cy.get('.quest-header').should('be.visible').should('contain', 'Mow your lawn')
-      cy.get('.quest-text').should('not.exist')
+        .should('not.contain', 'Do a jigsaw puzzle')
+      cy.get('.quest-name-container > :nth-child(3)').should('not.exist')
     })
 
     it('Should be able to return to the main page after getting a new quest', () => {

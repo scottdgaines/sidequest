@@ -15,7 +15,19 @@
 .completed-quests-container {
     height: 60vh;
     margin-top: 0px;
-    overflow-x: scroll;
     min-width: 300px;
+    overflow-x: scroll;
     width: 30vw;
+}
+
+@media screen and (max-width: 414px)and (max-height) {
+    .completed-quests-container {
+        height: 25vh;
+    }
+
+    .completed-quests-display {
+        height: 25vh;
+        margin-top: 50px;
+        width: 20vw;
+    }
 }

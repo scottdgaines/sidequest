@@ -6,10 +6,20 @@ button {
   margin: 0px 3px;
 }
 
+.character {
+  width: 25em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 nav {
@@ -23,12 +33,21 @@ nav {
   width: 16em; 
 }
 
+.setting-icon {
+  margin-right: 20px;
+  margin-top: 15px;
+  width: 30px;
+}
+
 .title {
   align-self: flex-start;
-  width: 25em;
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
+  width: 20em;
+}
 
+.theme-button {
+  font-size: 20px;
 }
 
 .welcome-message {
@@ -37,7 +56,42 @@ nav {
   margin-top: 20px;
 }
 
-.wizard {
-  width: 25em;
+/* Backgrounds */
+.castle-background {
+  background-image: url('./assets/castle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.forest-background {
+  background-image: url('./assets/forest.png');
+}
+
+.meadow-background {
+  background-image: url('./assets/meadow.png');
+}
+
+@media screen and (max-width: 414px) and (max-height){
+  .character {
+    width: 5em;
+  }
+
+  button {
+    font-size: 20px;
+    margin: 6px 3px;
+  }
+
+  nav {
+    /* height: 80px; */
+    overflow-x: scroll;
+    width: 50vw;
+  }
+
+  .title {
+    width: 10em;
+  }
+
+  .welcome-message {
+    margin-top: 10px;
+  }
+}
