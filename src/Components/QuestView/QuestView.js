@@ -18,6 +18,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, completed, error }) 
     if (!completed) {
         header = 
             <div className="quest-name-container">
+                <p className="quest-text">Your quest, Traveler, is to:</p>
                 <h2 className="quest-header">{currentQuest.activity}</h2>
                 {optionalLink}
             </div>
