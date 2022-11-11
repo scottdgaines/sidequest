@@ -52,3 +52,19 @@ nav {
   width: 25em;
 }
 
+/* Backgrounds */
+
+.meadow-background {
+  background-image: url('./assets/meadow.png');
+}
+
+.forest-background {
+  background-image: url('./assets/forest.png');
+}
+
+.castle-background {
+  background-image: url('./assets/castle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

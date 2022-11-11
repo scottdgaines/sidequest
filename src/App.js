@@ -39,20 +39,20 @@ const App = () => {
     setCompletedQuests([...completedQuests, currentQuest]);
   };
 
-  if (theme === 'forest') {
+  // if (theme === 'forest') {
     
-  } else if (theme === 'castle') {
-    console.log(theme)
-  } else {
-    console.log(theme.character)
-  }
+  // } else if (theme === 'castle') {
+  //   console.log(theme)
+  // } else {
+  //   console.log(theme.character)
+  // }
 
   useEffect (() => {
     getData();
   }, []);
 
   return (
-    <main>
+    <main className={theme.background}>
       <Switch>
         <Route exact path="/">
           <header>
