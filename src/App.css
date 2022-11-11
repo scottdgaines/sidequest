@@ -6,6 +6,10 @@ button {
   margin: 0px 3px;
 }
 
+.character {
+  width: 25em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -13,9 +17,9 @@ header {
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 nav {
@@ -30,16 +34,16 @@ nav {
 }
 
 .setting-icon {
-  width: 30px;
   margin-right: 20px;
   margin-top: 15px;
+  width: 30px;
 }
 
 .title {
   align-self: flex-start;
-  width: 20em;
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
+  width: 20em;
 }
 
 .theme-button {
@@ -52,28 +56,24 @@ nav {
   margin-top: 20px;
 }
 
-.character {
-  width: 25em;
-}
-
 /* Backgrounds */
-.meadow-background {
-  background-image: url('./assets/meadow.png');
-}
-
-.forest-background {
-  background-image: url('./assets/forest.png');
-}
-
 .castle-background {
   background-image: url('./assets/castle.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media screen and (max-width: 480px) {
-  .wizard {
-    width: 15em;
+.forest-background {
+  background-image: url('./assets/forest.png');
+}
+
+.meadow-background {
+  background-image: url('./assets/meadow.png');
+}
+
+@media screen and (max-width: 414px) and (max-height){
+  .character {
+    width: 5em;
   }
 
   button {
@@ -82,15 +82,13 @@ nav {
   }
 
   nav {
-    height: 80px;
+    /* height: 80px; */
     overflow-x: scroll;
-    width: 8em;
+    width: 50vw;
   }
 
   .title {
-    width: 15em;
-    margin-top: 30px;
-    margin-bottom: 50px
+    width: 10em;
   }
 
   .welcome-message {
