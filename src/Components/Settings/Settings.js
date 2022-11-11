@@ -14,11 +14,10 @@ const Settings = ({ theme, setTheme }) => {
             <label for="haunted-forest" className="quest-text theme-button">Haunted forest</label>
             <input type="radio" name="theme" value="castle" checked={theme === castle} onChange={() => setTheme(castle)} />
             <label for="castle" className="quest-text theme-button">Castle</label>
-            <Link to="/">
-                <button className="quest-button">Return to Main</button>
-            </Link>
         </form>
-    
+        <Link to="/">
+                <button className="quest-button">Return to Main</button>
+        </Link>
     </div>
   )
 }
