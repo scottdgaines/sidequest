@@ -12,6 +12,7 @@ list of conquered quests to keep track of your activity. Users may also change t
 forest, or a grand castle to match the setting they feel most inspired by.
 
 ![2022-11-12 12 45 50](https://user-images.githubusercontent.com/103966650/201491945-f7905fa3-482e-4db4-8e7a-1c41697bd195.gif)
+![2022-11-12 12 51 58](https://user-images.githubusercontent.com/103966650/201492146-6e006e1f-55c1-477e-8909-f79df20f7278.gif)
 
 ## Project Context
 I am currently a student at the Turing School for Software and Design studying front-end engineering. This application was created as my final "Showcase" 
