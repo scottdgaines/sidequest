@@ -17,7 +17,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   const errorMessage = error ? <p className="welcome-message">The Dark Lord is afoot! For your safety, I cannot grant quests at this time. But fear not! You can try again later.</p> : null;
-  const welcomeMessage = !error ? <p className="welcome-message">Welcome, {`${theme.greeting}`}! <br />I have a quest for you! <br />What would you like to do?</p> : errorMessage;
+  const welcomeMessage = !error ? <p className="welcome-message">Greetings, {`${theme.greeting}`}! <br />I have a quest for you! <br />What would you like to do?</p> : errorMessage;
   const conditionalButton = !error ?   <Link to="/new-quest"><button>View Your Quest</button></Link> : null;
 
   const getData = async () => {
