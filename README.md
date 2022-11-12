@@ -45,7 +45,7 @@ Turing's requirements for this project included:
     - Multiple views handled by Router
     - Be deployed using Heroku, Surge, or any other similar service
     
-[Personal Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing)
+[Personal Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing)<br/>
 [Turing Project Requirements and Rubric](https://frontend.turing.edu/projects/module-3/showcase.html)
 
 ## Technologies
