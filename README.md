@@ -11,6 +11,8 @@ If the suggested activity is not within your wheelhouse, you can opt to recieve 
 list of conquered quests to keep track of your activity. Users may also change the interface environment from a quaint meadow setting, to a haunted 
 forest, or a grand castle to match the setting they feel most inspired by.
 
+![2022-11-12 12 45 50](https://user-images.githubusercontent.com/103966650/201491945-f7905fa3-482e-4db4-8e7a-1c41697bd195.gif)
+
 ## Project Context
 I am currently a student at the Turing School for Software and Design studying front-end engineering. This application was created as my final "Showcase" 
 project at the end of the program's third quarter (about 4 months into my coding career), and was completed from planning to deployment in four days.
@@ -73,7 +75,7 @@ If you would like to download the app locally:
 
 ### Challenges
 - Refactoring styling / use of media queries for mobile device responsiveness
-- 
+
 
 ### Future Iterations
 - Filtering suggested activities so that the user does not see an activity they have already completed
