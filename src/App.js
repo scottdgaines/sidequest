@@ -22,7 +22,7 @@ const App = () => {
 
   const getData = async () => {
     try {    
-      const response = await fetch('http://www.boredapi.com/api/activity/');
+      const response = await fetch('https://www.boredapi.com/api/activity/');
       const data = await response.json();
       const activity = cleanData(data);
 
