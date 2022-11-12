@@ -1,6 +1,6 @@
 # SideQuest
 
-[Deployed Link](https://sidequest-i43seu6wz-scottdgaines.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/) | 
+[Deployed Link](https://sidequest-aujya43dn-scottdgaines.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/) | 
 [Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing) | 
 [Project Board](https://trello.com/b/ldH9RB0V/sidequest)
 
