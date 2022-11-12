@@ -73,6 +73,7 @@ If you would like to download the app locally:
   - Incorperated data cleaning
   - Designing app for target audience / user personas
 - Creation of original graphics, and customization of gif images
+- Completed MVP and additional iteration in time alloted
 
 ### Challenges
 - Refactoring styling / use of media queries for mobile device responsiveness
