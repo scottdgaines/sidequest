@@ -95,9 +95,10 @@ scottdgaines@gmail.com<br/>
 ### Credits
 Wireframe created on Miro<br/>
 Project Board created on Trello<br/>
+Graphics and gifs created using Procreate<br/>
 Original Wizard image created by [GumibearsGaff](https://www.redbubble.com/people/GumibearsGaff/shop#profile)<br/>
 Original Witch image created by [SARAWUT PADUNGKWAN ](https://www.alamy.com/stock-photo/?name=SARAWUT+PADUNGKWAN&pseudoid=881056D1-08C8-46C8-A500-5C62A7E78C9F&sortBy=relevant)<br/>
 Original King image from [iStock by Getty Images](https://www.istockphoto.com/vector/pixel-art-king-character-fairytale-personage-gm1267017801-371608842)<br/>
 Meadow background from [mybackdrop.co.uk](https://mybackdrop.co.uk/product/rolling-hills-backdrop-illustration/)<br/>
 Forest background created by [Xavier Gonzales](https://www.artstation.com/xavier1424)<br/>
-Castle background created by [Nameless Designs](https://www.deviantart.com/namelessdesigns)
+Castle background created by [Nameless Designs](https://www.deviantart.com/namelessdesigns)<br/>
