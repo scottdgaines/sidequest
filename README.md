@@ -44,6 +44,9 @@ Turing's requirements for this project included:
     - Ability for users to store/manipulate the data displayed in the application, such as favoriting or adding to a list, searching, commenting, etc
     - Multiple views handled by Router
     - Be deployed using Heroku, Surge, or any other similar service
+    
+[Personal Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing)
+[Turing Project Requirements and Rubric](https://frontend.turing.edu/projects/module-3/showcase.html)
 
 ## Technologies
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
