@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './QuestView.css';
 
-const QuestView = ({ currentQuest,  markCompleted, getData, greeting, completed, error }) => {
+const QuestView = ({ currentQuest,  markCompleted, loadData, greeting, completed, error }) => {
     let optionalLink;
     let header;
     let dynamicButton;
@@ -27,7 +27,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, greeting, completed,
             <div>
                 <h2 className="quest-header">Well done, {`${greeting}`}!</h2>
                 <p className="quest-text">Your quest is complete. 
-                <br /> What would you like to do now?</p>
+                <br />What would you like to do now?</p>
             </div>
     };
     
@@ -37,8 +37,10 @@ const QuestView = ({ currentQuest,  markCompleted, getData, greeting, completed,
             <Link to="quest-complete">
                 <button 
                     onClick={() => {
+                        loadData()
                         markCompleted(currentQuest)
-                        getData()}}
+                        }
+                    }
                     className="quest-button">
                     Mark as Complete
                 </button>
@@ -56,7 +58,7 @@ const QuestView = ({ currentQuest,  markCompleted, getData, greeting, completed,
                 {header}
                 {dynamicButton}
                 <Link to="/new-quest">
-                    <button onClick={getData} className="quest-button">Get Another Quest</button>
+                    <button onClick={loadData} className="quest-button">Get Another Quest</button>
                 </Link>
                 <Link to="/">
                     <button className="quest-button">Return to Main</button>
@@ -70,7 +72,7 @@ export default QuestView;
 QuestView.propTypes = {
     currentQuest: PropTypes.object,
     markCompleted: PropTypes.func,
-    getData: PropTypes.func.isRequired,
+    loadData: PropTypes.func.isRequired,
     greeting: PropTypes.string.isRequired,
     completed: PropTypes.bool,
     error: PropTypes.string

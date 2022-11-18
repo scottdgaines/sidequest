@@ -4,6 +4,7 @@ button {
   font-family: 'VT323', monospace;
   font-size: 25px;
   margin: 0px 3px;
+  margin-bottom: 15px;
 }
 
 .character {
@@ -20,7 +21,6 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100vh;
   justify-content: center;
 }
@@ -72,6 +72,7 @@ nav {
 
 .meadow-background {
   background-image: url('./assets/meadow.png');
+  background-size: cover;
 }
 
 @media screen and (max-width: 414px) and (max-height){

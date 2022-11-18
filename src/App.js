@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+import fetchData from './apiCalls';
 import QuestView from './Components/QuestView/QuestView';
 import Completed from './Components/Completed/Completed';
 import Settings from './Components/Settings/Settings';
 import NotFound from'./Components/NotFound/NotFound';
-import cleanData from './utilities';
 import './App.css';
 import titleBanner from './assets/title-banner.png';
 import settingsIcon from './assets/settings-icon.png';
@@ -20,29 +20,18 @@ const App = () => {
   const welcomeMessage = !error ? <p className="welcome-message">Greetings, {`${theme.greeting}`}! <br />I have a quest for you! <br />What would you like to do?</p> : errorMessage;
   const conditionalButton = !error ?   <Link to="/new-quest"><button>View Your Quest</button></Link> : null;
 
-  const getData = async () => {
-    try {    
-      const response = await fetch('https://www.boredapi.com/api/activity/');
-      const data = await response.json();
-      const activity = cleanData(data);
-
-      if (!response.ok) {
-        return;
-      };
-
-      setCurrentQuest(activity);
-
-    } catch (error) {
-         setError(error);
-      };
-  };
-
   const markCompleted = (currentQuest) => {
     setCompletedQuests([...completedQuests, currentQuest]);
   };
 
+  const loadData = () => {
+    fetchData()
+    .then((activity) => setCurrentQuest(activity))
+    .catch((errorMessage) => setError(errorMessage))
+  }
+
   useEffect (() => {
-    getData();
+    loadData()
   }, []);
 
   return (
@@ -73,7 +62,7 @@ const App = () => {
           <QuestView 
             currentQuest={currentQuest} 
             markCompleted={markCompleted} 
-            getData={getData}
+            loadData={loadData}
             greeting={theme.greeting}
             error={error}
           />} 
@@ -81,7 +70,7 @@ const App = () => {
         <Route path="/quest-complete" render={() => 
           <QuestView 
             completed={true}
-            getData={getData}
+            loadData={loadData}
             greeting={theme.greeting}
           />} 
         />
