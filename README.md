@@ -1,6 +1,6 @@
 # SideQuest
 
-[Deployed Link](https://sidequest-aujya43dn-scottdgaines.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/) | 
+[Deployed Link](https://sidequest.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/) | 
 [Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing) | 
 [Project Board](https://trello.com/b/ldH9RB0V/sidequest)
 
@@ -13,8 +13,8 @@
 
 ## Overview
 For those days when too many video games have been played, or those afternoons when you don't know what to do with your free time, 
-SideQuest is here to provide you with immediate activity suggestions in a familiar and nostaligc user interface that will get you up and occupied. 
-If the suggested activity is not within your wheelhouse, you can opt to recieve a new sugggestion, or, once your quest has been completed, add it to your
+SideQuest is here to provide you with immediate activity suggestions in a familiar and nostalgic user interface that will get you up and occupied. 
+If the suggested activity is not within your wheelhouse, you can opt to receive a new suggestion, or, once your quest has been completed, add it to your
 list of conquered quests to keep track of your activity. Users may also change the interface environment from a quaint meadow setting, to a haunted 
 forest, or a grand castle to match the setting they feel most inspired by.
 
