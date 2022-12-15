@@ -1,5 +1,12 @@
 # SideQuest
 
+## Overview
+For those days when too many video games have been played, or those afternoons when you don't know what to do with your free time, 
+SideQuest is here to provide you with immediate activity suggestions in a familiar and nostalgic user interface that will get you up and occupied. 
+If the suggested activity is not within your wheelhouse, you can opt to receive a new suggestion, or, once your quest has been completed, add it to your
+list of conquered quests to keep track of your activity. Users may also change the interface environment from a quaint meadow setting, to a haunted 
+forest, or a grand castle to match the setting by which they feel most inspired.
+
 [Deployed Link](https://sidequest.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/) | 
 [Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing) | 
 [Project Board](https://trello.com/b/ldH9RB0V/sidequest)
@@ -10,13 +17,6 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
-## Overview
-For those days when too many video games have been played, or those afternoons when you don't know what to do with your free time, 
-SideQuest is here to provide you with immediate activity suggestions in a familiar and nostalgic user interface that will get you up and occupied. 
-If the suggested activity is not within your wheelhouse, you can opt to receive a new suggestion, or, once your quest has been completed, add it to your
-list of conquered quests to keep track of your activity. Users may also change the interface environment from a quaint meadow setting, to a haunted 
-forest, or a grand castle to match the setting they feel most inspired by.
 
 ![2022-11-12 12 45 50](https://user-images.githubusercontent.com/103966650/201491945-f7905fa3-482e-4db4-8e7a-1c41697bd195.gif)
 ![2022-11-12 12 51 58](https://user-images.githubusercontent.com/103966650/201492146-6e006e1f-55c1-477e-8909-f79df20f7278.gif)
