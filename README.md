@@ -7,7 +7,7 @@ If the suggested activity is not within your wheelhouse, you can opt to receive 
 list of conquered quests to keep track of your activity. Users may also change the interface environment from a quaint meadow setting, to a haunted 
 forest, or a grand castle to match the setting by which they feel most inspired.
 
-[Deployed Link](https://sidequest.vercel.app/) | [WireFrame]([https://miro.com/app/board/uXjVPH1UJJk=/](https://miro.com/app/board/uXjVPH1UJJk=/?share_link_id=810660235369) | 
+[Deployed Link](https://sidequest.vercel.app/) | [WireFrame](https://miro.com/app/board/uXjVPH1UJJk=/?share_link_id=810660235369) | 
 [Spec](https://docs.google.com/document/d/1Gy4xcrO9-PCFiMJzM3Ei9-N3dIn1PUjnDzaXWo3wCxY/edit?usp=sharing) | 
 [Project Board](https://trello.com/b/ldH9RB0V/sidequest)
 
